@@ -1,5 +1,5 @@
 const asayncHandler = (requesHndler)=>{
-    (req,res,next)=>{
+    return (req,res,next)=>{
         Promise.resolve(requestHndler(req ,res,next)).catch(err=>{next(err);});
     } 
 }
